@@ -51,7 +51,7 @@ public class Main3Activity extends AppCompatActivity {
                     Main3Activity.this.startActivity(intent);
                 }
                 else{
-
+                    //Stay
                 }
             }
         });
