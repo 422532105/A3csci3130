@@ -65,7 +65,7 @@ public class Main2Activity extends Activity {
         check.add("Processor");
         check.add("Fish Monger");
         if(!TextUtils.isEmpty(businessNumber) && TextUtils.isDigitsOnly(businessNumber) && businessNumber.length()==9){
-            data.setBusinessNumber(businessNumber);
+            data.setBusinessNumber(businessNumber);// write business number in
         }
         else if(!TextUtils.isDigitsOnly(businessNumber)){
             Toast.makeText(this,"You only can enter digit number as the business number",Toast.LENGTH_LONG).show();
@@ -80,7 +80,7 @@ public class Main2Activity extends Activity {
             return false;
         }
         if(!TextUtils.isEmpty(name) && name.length()>=2 && name.length()<=48){
-            data.setName(name);
+            data.setName(name);//write name in
         }
         else if(name.length()<2){
             Toast.makeText(this,"The length of name is incorrect",Toast.LENGTH_LONG).show();
@@ -91,7 +91,7 @@ public class Main2Activity extends Activity {
             return false;
         }
         if(!TextUtils.isEmpty(primaryBusiness) && check.contains(primaryBusiness)){
-            data.setPrimaryBusiness(primaryBusiness);
+            data.setPrimaryBusiness(primaryBusiness);//write primary business in
         }
         else if(! check.contains(primaryBusiness)){
             Toast.makeText(this,"You need to enter a correct primary business",Toast.LENGTH_LONG).show();
@@ -101,7 +101,7 @@ public class Main2Activity extends Activity {
             Toast.makeText(this,"You need to enter a primary business",Toast.LENGTH_LONG).show();
             return false;
         }
-        mReference.child(id).setValue(data);
+        mReference.child(id).setValue(data);//set data into database with id
         return  true;
 
     }

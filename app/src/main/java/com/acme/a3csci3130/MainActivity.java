@@ -50,7 +50,7 @@ public class MainActivity extends Activity {
         listView.setAdapter(adapter);
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
-            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {//read name into list
                 Data person = (Data) adapter.getItem(position);
                 showDetailView(person);
             }

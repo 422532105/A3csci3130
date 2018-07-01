@@ -69,7 +69,7 @@ public class Main3Activity extends Activity {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
                 for(DataSnapshot ds: dataSnapshot.getChildren()){
-                    contact = ds.getValue(Data.class);
+                    contact = ds.getValue(Data.class);//read data from database
                     editText6.setText(contact.getBusinessNumber());
                     editText7.setText(contact.getName());
                     editText8.setText(contact.getPrimaryBusiness());
